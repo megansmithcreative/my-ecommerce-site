@@ -1,49 +1,68 @@
 body {
-  background: #0f0f0f;
+  background: #0a0a0a;
   color: white;
-  font-family: Arial;
+  font-family: 'Poppins', sans-serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 40px;
   background: black;
   color: #d4af37;
+  font-size: 24px;
 }
 
 .products {
   display: flex;
-  gap: 20px;
-  padding: 20px;
+  gap: 30px;
+  padding: 40px;
 }
 
 .card {
-  background: #1a1a1a;
-  padding: 15px;
-  border-radius: 10px;
+  background: #111;
+  padding: 20px;
+  border-radius: 15px;
   text-align: center;
+  width: 200px;
   transition: 0.3s;
+  box-shadow: 0 0 10px rgba(212,175,55,0.2);
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(212,175,55,0.5);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 button {
-  background: #d4af37;
+  background: linear-gradient(45deg, #d4af37, #ffd700);
   border: none;
   padding: 10px;
+  margin-top: 10px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  opacity: 0.8;
 }
 
 .cart {
   position: fixed;
-  right: 0;
+  right: -350px;
   top: 0;
-  background: black;
+  background: #111;
   width: 300px;
   height: 100%;
-  display: none;
   padding: 20px;
+  transition: 0.4s;
+}
+
+.cart.active {
+  right: 0;
 }
