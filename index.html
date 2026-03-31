@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Luxury Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+<header>
+  <h1>Luxury Store</h1>
+  <button onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</button>
+</header>
+
+<section class="products">
+
+  <div class="card">
+    <img src="images/p1.jpg">
+    <h2>Watch</h2>
+    <p>Rs 5000</p>
+    <button onclick="addToCart('Watch',5000)">Add to Cart</button>
+  </div>
+
+  <div class="card">
+    <img src="images/p2.jpg">
+    <h2>Shoes</h2>
+    <p>Rs 3000</p>
+    <button onclick="addToCart('Shoes',3000)">Add to Cart</button>
+  </div>
+
+</section>
+
+<div id="cartBox" class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartItems"></ul>
+  <h3 id="total"></h3>
+  <button onclick="checkout()">Buy Now</button>
+</div>
+
+<footer>
+  <a href="https://wa.me/92XXXXXXXXXX">WhatsApp Support</a>
+
+  <p>Payment:</p>
+  <p>EasyPaisa / JazzCash / Bank Transfer</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
