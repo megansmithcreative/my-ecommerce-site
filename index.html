@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>Mega Hub</title>
+
+  <!-- Premium Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -9,22 +13,26 @@
 
 <header class="header">
   <div class="brand">
-    <img src="images/logo.png" alt="logo">
-  <h1>Mega Hub</h1>
-  <button onclick="toggleCart()">🛒 Cart (<span id="count">0</span>)</button>
+    <img src="./images/logo.png" alt="logo">
+    <h1>MEGA HUB</h1>
+  </div>
+
+  <button class="cart-btn" onclick="toggleCart()">
+    🛒 Cart (<span id="count">0</span>)
+  </button>
 </header>
 
 <section class="products">
 
   <div class="card">
-    <img src="images/p1.jpg">
+    <img src="./images/p1.jpg">
     <h2>Watch</h2>
     <p>Rs 5000</p>
     <button onclick="addToCart('Watch',5000)">Add to Cart</button>
   </div>
 
   <div class="card">
-    <img src="images/p2.jpg">
+    <img src="./images/p2.jpg">
     <h2>Shoes</h2>
     <p>Rs 3000</p>
     <button onclick="addToCart('Shoes',3000)">Add to Cart</button>
@@ -39,8 +47,8 @@
   <button onclick="checkout()">Buy Now</button>
 </div>
 
-<footer>
-  <a href="https://wa.me/92XXXXXXXXXX">WhatsApp Support</a>
+<footer class="footer">
+  <a href="https://wa.me/923361236765" target="_blank">WhatsApp Support</a>
 
   <p>Payment:</p>
   <p>EasyPaisa / JazzCash / Bank Transfer</p>
