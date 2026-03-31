@@ -24,8 +24,7 @@ function updateCart() {
 }
 
 function toggleCart() {
-  let cartBox = document.getElementById("cartBox");
-  cartBox.classList.toggle("active");
+  document.getElementById("cartBox").classList.toggle("active");
 }
 
 function checkout() {
