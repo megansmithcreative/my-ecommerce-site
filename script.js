@@ -1,10 +1,12 @@
 let cart = [];
 
+// ADD TO CART
 function addToCart(name, price) {
-  cart.push({name, price});
+  cart.push({ name, price });
   updateCart();
 }
 
+// UPDATE CART
 function updateCart() {
   let list = document.getElementById("cartItems");
   let count = document.getElementById("count");
@@ -12,10 +14,14 @@ function updateCart() {
 
   list.innerHTML = "";
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     let li = document.createElement("li");
-    li.innerText = item.name + " - Rs " + item.price;
+    li.innerHTML = `
+      ${item.name} - Rs ${item.price}
+      <span onclick="removeItem(${index})" style="color:red;cursor:pointer;margin-left:10px;">❌</span>
+    `;
     list.appendChild(li);
+
     total += item.price;
   });
 
@@ -23,20 +29,44 @@ function updateCart() {
   document.getElementById("total").innerText = "Total: Rs " + total;
 }
 
+// REMOVE ITEM ❌
+function removeItem(index) {
+  cart.splice(index, 1);
+  updateCart();
+}
+
+// TOGGLE CART
 function toggleCart() {
   document.getElementById("cartBox").classList.toggle("active");
 }
 
+// CLICK OUTSIDE TO CLOSE
+document.addEventListener("click", function(e) {
+  let cart = document.getElementById("cartBox");
+  let btn = document.querySelector(".cart-btn");
+
+  if (!cart.contains(e.target) && !btn.contains(e.target)) {
+    cart.classList.remove("active");
+  }
+});
+
+// CHECKOUT (WHATSAPP)
 function checkout() {
-  let message = "Order:\n";
+  if (cart.length === 0) {
+    alert("Cart is empty!");
+    return;
+  }
+
+  let message = "🛒 Order Details:\n\n";
 
   cart.forEach(item => {
-    message += item.name + " - Rs " + item.price + "\n";
+    message += `${item.name} - Rs ${item.price}\n`;
   });
 
-  window.open("https://wa.me/92XXXXXXXXXX?text=" + encodeURIComponent(message));
+  window.open("https://wa.me/923361236765?text=" + encodeURIComponent(message));
 }
 
+// SCROLL ARROW
 document.querySelector(".arrow-down").addEventListener("click", function() {
   document.getElementById("products").scrollIntoView({ behavior: "smooth" });
 });
