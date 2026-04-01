@@ -132,6 +132,14 @@ button {
   opacity: 0.3;
 }
 
+button {
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 /* FOOTER */
 .footer {
   text-align: center;
