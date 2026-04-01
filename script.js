@@ -36,3 +36,7 @@ function checkout() {
 
   window.open("https://wa.me/92XXXXXXXXXX?text=" + encodeURIComponent(message));
 }
+
+document.querySelector(".arrow-down").addEventListener("click", function() {
+  document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+});
