@@ -50,12 +50,15 @@
   </button>
 </div>
 
-  <div class="card">
-    <img src="./images/p2.jpg">
-    <h2>Shoes</h2>
-    <p>Rs 3000</p>
-    <button onclick="addToCart('Shoes',3000,this)">Add to Cart</button>
-  </div>
+ <div class="card" onclick="openProduct('shoes.html')">
+  <img src="./images/p2.jpg">
+  <h2>Shoes</h2>
+  <p>Rs 3000</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Shoes',3000,this)">
+    Add to Cart
+  </button>
+</div>
 
 </section>
 
