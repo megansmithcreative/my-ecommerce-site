@@ -3,17 +3,15 @@
 <head>
   <title>MIXED HUB</title>
 
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  
+
 <header class="header">
   <div class="brand">
-    <img src="./images/logo.png" alt="logo">
+    <img src="./images/logo.png">
     <h1>MIXED HUB</h1>
   </div>
 
@@ -29,7 +27,6 @@
     <p>Premium Quality Products for You</p>
 
     <a href="#products" class="hero-btn">Shop Now</a>
-
     <div class="arrow-down">↓</div>
   </div>
 </section>
@@ -41,7 +38,7 @@
     <img src="./images/p1.jpg">
     <h2>Watch</h2>
     <p>Rs 5000</p>
-   <button onclick="addToCart('Watch',5000,this)">Add to Cart</button>
+    <button onclick="addToCart('Watch',5000,this)">Add to Cart</button>
   </div>
 
   <div class="card">
@@ -71,13 +68,6 @@
 </footer>
 
 <script src="script.js"></script>
-
-<!-- SCROLL JS -->
-<script>
-document.querySelector(".arrow-down").addEventListener("click", function() {
-  document.getElementById("products").scrollIntoView({ behavior: "smooth" });
-});
-</script>
 
 </body>
 </html>
