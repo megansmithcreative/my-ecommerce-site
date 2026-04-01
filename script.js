@@ -76,3 +76,6 @@ function checkout() {
 document.querySelector(".arrow-down").onclick = function() {
   document.getElementById("products").scrollIntoView({ behavior: "smooth" });
 };
+function openProduct(page) {
+  window.location.href = page;
+}
