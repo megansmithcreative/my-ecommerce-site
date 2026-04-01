@@ -1,16 +1,16 @@
 let cart = [];
 
+// ADD TO CART
 function addToCart(name, price, btn) {
   cart.push({ name, price });
   updateCart();
 
-  // 🔥 Button feedback
   btn.innerText = "Added ✓";
   btn.style.background = "green";
 
   setTimeout(() => {
     btn.innerText = "Add to Cart";
-    btn.style.background = "";
+    btn.style.background = "gold";
   }, 1000);
 }
 
@@ -24,10 +24,8 @@ function updateCart() {
 
   cart.forEach((item, index) => {
     let li = document.createElement("li");
-    li.innerHTML = `
-      ${item.name} - Rs ${item.price}
-      <span onclick="removeItem(${index})" style="color:red;cursor:pointer;margin-left:10px;">❌</span>
-    `;
+    li.innerHTML = `${item.name} - Rs ${item.price} 
+    <span onclick="removeItem(${index})" style="color:red;cursor:pointer;">❌</span>`;
     list.appendChild(li);
 
     total += item.price;
@@ -37,44 +35,44 @@ function updateCart() {
   document.getElementById("total").innerText = "Total: Rs " + total;
 }
 
-// REMOVE ITEM ❌
-function removeItem(index) {
-  cart.splice(index, 1);
+// REMOVE
+function removeItem(i) {
+  cart.splice(i, 1);
   updateCart();
 }
 
-// TOGGLE CART
+// CART TOGGLE
 function toggleCart() {
   document.getElementById("cartBox").classList.toggle("active");
 }
 
-// CLICK OUTSIDE TO CLOSE
+// CLICK OUTSIDE CLOSE
 document.addEventListener("click", function(e) {
-  let cart = document.getElementById("cartBox");
+  let cartBox = document.getElementById("cartBox");
   let btn = document.querySelector(".cart-btn");
 
-  if (!cart.contains(e.target) && !btn.contains(e.target)) {
-    cart.classList.remove("active");
+  if (!cartBox.contains(e.target) && !btn.contains(e.target)) {
+    cartBox.classList.remove("active");
   }
 });
 
-// CHECKOUT (WHATSAPP)
+// CHECKOUT
 function checkout() {
   if (cart.length === 0) {
-    alert("Cart is empty!");
+    alert("Cart empty!");
     return;
   }
 
-  let message = "🛒 Order Details:\n\n";
+  let msg = "Order:\n";
 
   cart.forEach(item => {
-    message += `${item.name} - Rs ${item.price}\n`;
+    msg += item.name + " - Rs " + item.price + "\n";
   });
 
-  window.open("https://wa.me/923361236765?text=" + encodeURIComponent(message));
+  window.open("https://wa.me/923361236765?text=" + encodeURIComponent(msg));
 }
 
-// SCROLL ARROW
-document.querySelector(".arrow-down").addEventListener("click", function() {
+// SCROLL
+document.querySelector(".arrow-down").onclick = function() {
   document.getElementById("products").scrollIntoView({ behavior: "smooth" });
-});
+};
