@@ -35,11 +35,14 @@
 <section class="products" id="products">
 
   <div class="card" onclick="openProduct('watch.html')">
-    <img src="./images/p1.jpg">
-    <h2>Watch</h2>
-    <p>Rs 5000</p>
-    <button onclick="addToCart('Watch',5000,this)">Add to Cart</button>
-  </div>
+  <img src="./images/p1.jpg">
+  <h2>Watch</h2>
+  <p>Rs 5000</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Watch',5000,this)">
+    Add to Cart
+  </button>
+</div>
 
   <div class="card">
     <img src="./images/p2.jpg">
