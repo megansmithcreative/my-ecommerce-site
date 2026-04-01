@@ -3,7 +3,7 @@
 <head>
   <title>MIXED HUB</title>
 
-  <!-- Premium Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
@@ -21,7 +21,8 @@
     🛒 Cart (<span id="count">0</span>)
   </button>
 </header>
-  
+
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Welcome to Mixed Hub</h1>
@@ -29,11 +30,11 @@
 
     <a href="#products" class="hero-btn">Shop Now</a>
 
-    <!-- 👇 ye arrow add karo -->
     <div class="arrow-down">↓</div>
   </div>
 </section>
-  
+
+<!-- PRODUCTS -->
 <section class="products" id="products">
 
   <div class="card">
@@ -52,6 +53,7 @@
 
 </section>
 
+<!-- CART -->
 <div id="cartBox" class="cart">
   <span class="close-btn" onclick="toggleCart()">✖</span>
 
@@ -62,13 +64,20 @@
   <button onclick="checkout()">Buy Now</button>
 </div>
 
+<!-- FOOTER -->
 <footer class="footer">
   <a href="https://wa.me/923361236765" target="_blank">WhatsApp Support</a>
-
-  <p>Payment:</p>
-  <p>EasyPaisa / JazzCash / Bank Transfer</p>
+  <p>Payment: EasyPaisa / JazzCash / Bank Transfer</p>
 </footer>
 
 <script src="script.js"></script>
+
+<!-- SCROLL JS -->
+<script>
+document.querySelector(".arrow-down").addEventListener("click", function() {
+  document.getElementById("products").scrollIntoView({ behavior: "smooth" });
+});
+</script>
+
 </body>
 </html>
