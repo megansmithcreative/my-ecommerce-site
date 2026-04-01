@@ -1,9 +1,17 @@
 let cart = [];
 
-// ADD TO CART
-function addToCart(name, price) {
+function addToCart(name, price, btn) {
   cart.push({ name, price });
   updateCart();
+
+  // 🔥 Button feedback
+  btn.innerText = "Added ✓";
+  btn.style.background = "green";
+
+  setTimeout(() => {
+    btn.innerText = "Add to Cart";
+    btn.style.background = "";
+  }, 1000);
 }
 
 // UPDATE CART
