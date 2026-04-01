@@ -25,7 +25,7 @@ function updateCart() {
   cart.forEach((item, index) => {
     let li = document.createElement("li");
     li.innerHTML = `${item.name} - Rs ${item.price} 
-    <span onclick="removeItem(${index})" style="color:red;cursor:pointer;">❌</span>`;
+    <span onclick="event.stopPropagation(); removeItem(${index})" style="color:red;cursor:pointer;">❌</span>`;
     list.appendChild(li);
 
     total += item.price;
