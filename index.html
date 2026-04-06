@@ -44,33 +44,58 @@
 <!-- PRODUCTS -->
 <section class="products" id="products">
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/BBQ Injector.jpg">
-    <h2>BBQ Injector</h2>
-    <p>Rs 800</p>
-    <button onclick="addToCart('BBQ Injector',800,this)">Add to Cart</button>
-  </div>
+  <div class="card" onclick="openProduct('BBQ Injector.html')" data-category="kitchen">
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/Hook Strip.jpg">
-    <h2>Hook Strip</h2>
-    <p>Rs 600</p>
-    <button onclick="addToCart('Hook Strip',600,this)">Add to Cart</button>
-  </div>
+  <img src="./images/BBQ Injector.jpg">
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/Cereal Dispenser.jpg">
-    <h2>Cereal Dispenser</h2>
-    <p>Rs 5000</p>
-    <button onclick="addToCart('Cereal',5000,this)">Add to Cart</button>
-  </div>
+  <h2>BBQ Injector</h2>
+  <p>Rs 800</p>
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/Mini Sealer.jpg">
-    <h2>Mini Sealer</h2>
-    <p>Rs 750</p>
-    <button onclick="addToCart('Sealer',750,this)">Add to Cart</button>
-  </div>
+  <button onclick="event.stopPropagation(); addToCart('BBQ Injector',800,this)">
+    Add to Cart
+  </button>
+
+</div>
+
+  <div class="card" onclick="openProduct('Hook Strip.html')" data-category="kitchen">
+
+  <img src="./images/Hook Strip.jpg">
+
+  <h2>Hook Strip</h2>
+  <p>Rs 600</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Hook Strip',600,this)">
+    Add to Cart
+  </button>
+
+</div>
+
+  <div class="card" onclick="openProduct('Cereal Dispenser.html')" data-category="kitchen">
+
+  <img src="./images/Cereal Dispenser.jpg">
+
+  <h2>Cereal Dispenser</h2>
+  <p>Rs 5000</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Cereal Dispenser',5000,this)">
+    Add to Cart
+  </button>
+
+</div>
+
+  <div class="card" onclick="openProduct('Mini Sealer.html')" data-category="kitchen">
+
+  <img src="./images/Mini Sealer.jpg">
+
+  <h2>Mini Sealer</h2>
+  <p>Rs 750</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Mini Sealer',750,this)">
+    Add to Cart
+  </button>
+
+</div>
+
 
   <div class="card" data-category="cosmetic">
     <img src="./images/Cosmetic Organiser.jpg">
@@ -79,12 +104,18 @@
     <button onclick="addToCart('Organiser',2500,this)">Add to Cart</button>
   </div>
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/Oil Spray.jpg">
-    <h2>Oil Spray</h2>
-    <p>Rs 700</p>
-    <button onclick="addToCart('Oil Spray',700,this)">Add to Cart</button>
-  </div>
+  <div class="card" onclick="openProduct('Cosmetic Organiser.html')" data-category="kitchen">
+
+  <img src="./images/Cosmetic Organiser.jpg">
+
+  <h2>Cosmetic Organiser</h2>
+  <p>Rs 2500</p>
+
+  <button onclick="event.stopPropagation(); addToCart('Cosmetic Organiser',2500,this)">
+    Add to Cart
+  </button>
+
+</div>
 
   <div class="card" data-category="kitchen">
     <img src="./images/Cleaning Brush.jpg">
@@ -93,12 +124,18 @@
     <button onclick="addToCart('Brush',750,this)">Add to Cart</button>
   </div>
 
-  <div class="card" data-category="kitchen">
-    <img src="./images/RAF Blender.jpg">
-    <h2>RAF Blender</h2>
-    <p>Rs 3500</p>
-    <button onclick="addToCart('Blender',3500,this)">Add to Cart</button>
-  </div>
+  <div class="card" onclick="openProduct('RAF Blender.html')" data-category="kitchen">
+
+  <img src="./images/RAF Blender.jpg">
+
+  <h2>RAF Blender</h2>
+  <p>Rs 3500</p>
+
+  <button onclick="event.stopPropagation(); addToCart('RAF Blender',3500,this)">
+    Add to Cart
+  </button>
+
+</div>
 
 </section>
 
