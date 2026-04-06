@@ -74,8 +74,9 @@ body {
   display: flex;
   gap: 20px;
   padding: 40px;
-  flex-wrap: wrap;   /* 🔥 ye add karo */
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch; /* 🔥 important */
 }
 
 .card {
